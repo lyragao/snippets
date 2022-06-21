@@ -1,2 +1,2 @@
 # snippets
-might be useful someday:)
+code snippets that might be useful someday:)
