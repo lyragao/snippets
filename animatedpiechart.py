@@ -21,7 +21,6 @@ revshares = [[37, 24, 22, 17],
 revshares = np.array(revshares)
 
 z = np.array([0,0,0,0]).astype(np.float)
-year = 2018
 
 fig, ax = plt.subplots()
 
@@ -34,7 +33,8 @@ def update(num):
     z += revshares[num]  
     pie = ax.pie(z, labels=labels, colors=colors, 
                  autopct='%1.1f%%', shadow=False, startangle=140)
-    ax.set_title(math.floor(2016 + sum(z)/100))   
+    ax.set_title(math.floor(2000 + sum(z)/100))   
+         # above just sets a title for year that changes
     
 ani = animation.FuncAnimation(fig, update, frames=range(4), repeat=False)
 ani.save('revshare.gif', writer='pillow', fps=1)
